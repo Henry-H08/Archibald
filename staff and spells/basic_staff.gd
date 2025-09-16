@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 	else:
 		scale.y = 1
  
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_pressed("shoot"):
 		if can_use == true:
 			camera_2d.apply_shake(4)
 			var bullet_instance = current_spell.instantiate()
@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 			bullet_instance.global_position = pew.global_position
 			bullet_instance.rotation = rotation
 			can_use = false
-			await get_tree().create_timer(0.5).timeout
+			await get_tree().create_timer(0).timeout
 			can_use = true
 		
 	

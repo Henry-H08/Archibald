@@ -177,7 +177,6 @@ offset_left = -172.0
 offset_top = -104.0
 offset_right = -86.0
 offset_bottom = -99.0
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Health_Bar"]
 layout_mode = 1
@@ -207,7 +206,6 @@ offset_bottom = -72.0
 theme_override_fonts/font = ExtResource("9_nvl01")
 theme_override_font_sizes/font_size = 8
 text = "0"
-metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="coins"]
 position = Vector2(-7, -8)
@@ -215,7 +213,6 @@ texture = ExtResource("9_b26j0")
 
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
-visible = false
 scale = Vector2(0.2, 0.2)
 transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
 
@@ -233,7 +230,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 color = Color(0.0980392, 0.0980392, 0.0980392, 0.905882)
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="GameOver/ColorRect"]
 layout_mode = 1
@@ -251,6 +247,8 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 100
 text = "Game Over"
 uppercase = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
 [connection signal="timeout" from="temp" to="." method="_on_temp_timeout"]
