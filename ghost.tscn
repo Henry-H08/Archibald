@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1jje4ygdcrd8"]
+
+[ext_resource type="Texture2D" uid="uid://177yu7us6c7c" path="res://run.png" id="1_6attn"]
+[ext_resource type="Script" uid="uid://c6kcvmsttob2s" path="res://ghost.gd" id="1_v5pp4"]
+
+[node name="ghost" type="Sprite2D"]
+modulate = Color(0.224956, 0.267731, 1, 1)
+self_modulate = Color(0.223529, 0.266667, 1, 1)
+z_index = -2
+texture = ExtResource("1_6attn")
+hframes = 4
+vframes = 3
+script = ExtResource("1_v5pp4")

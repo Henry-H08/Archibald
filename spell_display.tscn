@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv183sh288w7t"]
+
+[ext_resource type="Script" uid="uid://1b1bjjs5stkq" path="res://spell_display.gd" id="1_nxxka"]
+[ext_resource type="Texture2D" uid="uid://cpvfn8c00bxbh" path="res://staff and spells/circle.png" id="1_oqc6o"]
+[ext_resource type="Texture2D" uid="uid://dmxp83v7xmiok" path="res://staff and spells/spells.png" id="2_nxxka"]
+
+[node name="spell_display" type="Node2D"]
+script = ExtResource("1_nxxka")
+
+[node name="circle" type="Sprite2D" parent="."]
+texture = ExtResource("1_oqc6o")
+
+[node name="displayed_spell" type="Sprite2D" parent="."]
+position = Vector2(-1, -5)
+texture = ExtResource("2_nxxka")
+offset = Vector2(0, -5)
+vframes = 2

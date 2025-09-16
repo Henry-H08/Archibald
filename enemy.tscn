@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://hxhoaerya023"]
+
+[ext_resource type="Script" uid="uid://umiplfqyi2c0" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://nl4mnx8q4ad5" path="res://cheep_green.png" id="2_qi2p4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f2i6"]
+atlas = ExtResource("2_qi2p4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tkix"]
+atlas = ExtResource("2_qi2p4")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r17s0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f2i6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tkix")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e8h8y"]
+size = Vector2(8, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
+size = Vector2(8, 9)
+
+[node name="enemy" type="CharacterBody2D"]
+z_index = -2
+collision_mask = 2
+script = ExtResource("1_4gyqm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_r17s0")
+frame_progress = 0.627033
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_e8h8y")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_4gyqm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://0ta7jsmj08ix"]
+
+[ext_resource type="Script" uid="uid://4guwxb61yqca" path="res://staff and spells/fireball.gd" id="1_8lxfj"]
+[ext_resource type="Texture2D" uid="uid://dypj7rk8crlj1" path="res://staff and spells/fireball.png" id="2_nk21r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ojd8"]
+atlas = ExtResource("2_nk21r")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7loo"]
+atlas = ExtResource("2_nk21r")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uwhxl"]
+atlas = ExtResource("2_nk21r")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs1th"]
+atlas = ExtResource("2_nk21r")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0wbye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ojd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7loo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uwhxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs1th")
+}],
+"loop": true,
+"name": &"basic",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pmnyc"]
+radius = 6.0
+
+[sub_resource type="Environment" id="Environment_8lxfj"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.06
+glow_blend_mode = 1
+
+[node name="fireball" type="Node2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_8lxfj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(10.929, 1, 1, 1)
+position = Vector2(18, -10)
+sprite_frames = SubResource("SpriteFrames_0wbye")
+animation = &"basic"
+frame_progress = 0.455188
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(20, 0)
+shape = SubResource("CircleShape2D_pmnyc")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8lxfj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
