@@ -137,7 +137,7 @@ position = Vector2(2163, -760)
 texture = ExtResource("4_hqtel")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(3, 3)
 script = ExtResource("4_n7ghd")
 
 [node name="pew" parent="." instance=ExtResource("4_sweqy")]
@@ -173,39 +173,34 @@ hframes = 2
 vframes = 2
 
 [node name="Health_Bar" parent="." instance=ExtResource("8_dw050")]
-offset_left = -172.0
-offset_top = -104.0
-offset_right = -86.0
-offset_bottom = -99.0
+offset_left = -152.0
+offset_top = -84.0
+offset_right = -66.0
+offset_bottom = -79.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Health_Bar"]
 layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 8.0
-offset_top = -2.5
-offset_right = -7.0
-offset_bottom = 20.5
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 11.0
+offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("9_nvl01")
 theme_override_font_sizes/font_size = 5
 text = "6/6"
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="spell_display" parent="." instance=ExtResource("9_n7ghd")]
-position = Vector2(157, -93)
+position = Vector2(138, -70)
 
 [node name="coins" type="Label" parent="."]
-offset_left = -163.0
-offset_top = -95.0
-offset_right = -123.0
-offset_bottom = -72.0
+offset_left = -142.0
+offset_top = -75.0
+offset_right = -102.0
+offset_bottom = -52.0
 theme_override_fonts/font = ExtResource("9_nvl01")
 theme_override_font_sizes/font_size = 8
 text = "0"
+metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="coins"]
 position = Vector2(-7, -8)
@@ -213,6 +208,7 @@ texture = ExtResource("9_b26j0")
 
 [node name="GameOver" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
+visible = false
 scale = Vector2(0.2, 0.2)
 transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
 
@@ -222,10 +218,10 @@ anchor_left = 0.342882
 anchor_top = 0.137346
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -250.0
-offset_top = -249.0
-offset_right = 1538.0
-offset_bottom = 1042.0
+offset_left = -530.0
+offset_top = -459.0
+offset_right = 1258.0
+offset_bottom = 832.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
