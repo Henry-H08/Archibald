@@ -18,11 +18,9 @@ func _physics_process(delta):
 	
 func take_damage(dmg):
 	health -= dmg 
-	if health == 0:
+	if health <= 0:
 		var coin_instance = coin.instantiate()
 		coin_instance.global_position = global_position
 		get_tree().root.add_child(coin_instance)
 		await get_tree().create_timer(0.01).timeout
 		queue_free()
-
-	
