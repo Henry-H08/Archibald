@@ -240,11 +240,10 @@ offset_right = 43.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_nvl01")
 theme_override_font_sizes/font_size = 100
 text = "Game Over"
 uppercase = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
 [connection signal="timeout" from="temp" to="." method="_on_temp_timeout"]

@@ -6,7 +6,7 @@
 [sub_resource type="Environment" id="Environment_8e5su"]
 background_mode = 3
 glow_enabled = true
-glow_strength = 0.56
+glow_strength = 0.58
 glow_blend_mode = 1
 glow_hdr_threshold = 4.0
 
@@ -20,7 +20,7 @@ script = ExtResource("1_c6pue")
 environment = SubResource("Environment_8e5su")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(2.5, 1, 4, 1)
+modulate = Color(100, 1, 18.579, 1)
 position = Vector2(0, -3)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_bq7l7")

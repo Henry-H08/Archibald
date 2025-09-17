@@ -152,6 +152,7 @@ func get_hit():
 	if damage_delay == 0:
 		damage_delay += 1
 		health -= 1
+		camera_2d.apply_shake(1)
 		health_bar.set_health(health)
 		await get_tree().create_timer(1).timeout
 		damage_delay -= 1
