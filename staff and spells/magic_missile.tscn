@@ -11,7 +11,7 @@ glow_blend_mode = 1
 glow_hdr_threshold = 4.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bq7l7"]
-size = Vector2(32.7344, 12.9948)
+size = Vector2(10, 3.2487)
 
 [node name="projectile" type="Node2D"]
 script = ExtResource("1_c6pue")
@@ -28,8 +28,8 @@ texture = ExtResource("2_bq7l7")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2.38419e-07, 0)
-scale = Vector2(0.05, 0.05)
+position = Vector2(0, -0.1)
+scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_bq7l7")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

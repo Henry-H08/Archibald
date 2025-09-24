@@ -1,8 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv183sh288w7t"]
+[gd_scene load_steps=8 format=3 uid="uid://bv183sh288w7t"]
 
 [ext_resource type="Script" uid="uid://1b1bjjs5stkq" path="res://spell_display.gd" id="1_nxxka"]
 [ext_resource type="Texture2D" uid="uid://cpvfn8c00bxbh" path="res://staff and spells/circle.png" id="1_oqc6o"]
-[ext_resource type="Texture2D" uid="uid://dmxp83v7xmiok" path="res://staff and spells/spells.png" id="2_nxxka"]
+[ext_resource type="Texture2D" uid="uid://dypj7rk8crlj1" path="res://staff and spells/fireball.png" id="3_kwom5"]
+[ext_resource type="Texture2D" uid="uid://ckmc8jf2w38lc" path="res://staff and spells/magic_missile.png" id="4_0n84f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6xgy"]
+atlas = ExtResource("3_kwom5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc0wo"]
+atlas = ExtResource("4_0n84f")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a50ba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6xgy")
+}],
+"loop": true,
+"name": &"fireball",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lc0wo")
+}],
+"loop": true,
+"name": &"magic_missile",
+"speed": 5.0
+}]
 
 [node name="spell_display" type="Node2D"]
 script = ExtResource("1_nxxka")
@@ -10,8 +38,7 @@ script = ExtResource("1_nxxka")
 [node name="circle" type="Sprite2D" parent="."]
 texture = ExtResource("1_oqc6o")
 
-[node name="displayed_spell" type="Sprite2D" parent="."]
-position = Vector2(-1, -5)
-texture = ExtResource("2_nxxka")
-offset = Vector2(0, -5)
-vframes = 2
+[node name="displayed_spell" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -9)
+sprite_frames = SubResource("SpriteFrames_a50ba")
+animation = &"magic_missile"
