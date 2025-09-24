@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://nl4mnx8q4ad5"
-path="res://.godot/imported/cheep_green.png-63a497437890200b8df26d5ddca7f620.ctex"
+path="res://.godot/imported/cheep_green.png-2e21f3f19147659973d41cb55f1f5c35.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cheep_green.png"
-dest_files=["res://.godot/imported/cheep_green.png-63a497437890200b8df26d5ddca7f620.ctex"]
+source_file="res://enemy/cheep_green.png"
+dest_files=["res://.godot/imported/cheep_green.png-2e21f3f19147659973d41cb55f1f5c35.ctex"]
 
 [params]
 

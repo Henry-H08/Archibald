@@ -3,7 +3,7 @@ extends CharacterBody2D
 var health = 2
 
 @onready var player = get_node("/root/main/player")
-const coin = preload("res://coin.tscn")
+const coin = preload("res://enemy/coin.tscn")
 @onready var area_2d: Area2D = $Area2D
 
 

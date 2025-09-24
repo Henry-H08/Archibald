@@ -1,16 +1,16 @@
 [gd_scene load_steps=8 format=3 uid="uid://bv183sh288w7t"]
 
-[ext_resource type="Script" uid="uid://1b1bjjs5stkq" path="res://spell_display.gd" id="1_nxxka"]
-[ext_resource type="Texture2D" uid="uid://cpvfn8c00bxbh" path="res://staff and spells/circle.png" id="1_oqc6o"]
-[ext_resource type="Texture2D" uid="uid://dypj7rk8crlj1" path="res://staff and spells/fireball.png" id="3_kwom5"]
-[ext_resource type="Texture2D" uid="uid://ckmc8jf2w38lc" path="res://staff and spells/magic_missile.png" id="4_0n84f"]
+[ext_resource type="Script" uid="uid://1b1bjjs5stkq" path="res://player/spell_display.gd" id="1_f3woo"]
+[ext_resource type="Texture2D" uid="uid://cpvfn8c00bxbh" path="res://staff and spells/circle.png" id="2_1v6gx"]
+[ext_resource type="Texture2D" uid="uid://dypj7rk8crlj1" path="res://staff and spells/fireball.png" id="3_r6tp2"]
+[ext_resource type="Texture2D" uid="uid://ckmc8jf2w38lc" path="res://staff and spells/magic_missile.png" id="4_ufrq5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6xgy"]
-atlas = ExtResource("3_kwom5")
+atlas = ExtResource("3_r6tp2")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lc0wo"]
-atlas = ExtResource("4_0n84f")
+atlas = ExtResource("4_ufrq5")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_a50ba"]
@@ -33,10 +33,10 @@ animations = [{
 }]
 
 [node name="spell_display" type="Node2D"]
-script = ExtResource("1_nxxka")
+script = ExtResource("1_f3woo")
 
 [node name="circle" type="Sprite2D" parent="."]
-texture = ExtResource("1_oqc6o")
+texture = ExtResource("2_1v6gx")
 
 [node name="displayed_spell" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2, -9)

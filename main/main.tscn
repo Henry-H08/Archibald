@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://cni7iu06uvd42"]
 
-[ext_resource type="PackedScene" uid="uid://dqjgj3q0vl75x" path="res://player.tscn" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://bqdk2rg1e1yt1" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://cdhpnfp87w7m" path="res://Grass (1).png" id="2_0xm2m"]
-[ext_resource type="Script" uid="uid://qin2bhi86j2j" path="res://path_2d.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://bqdk2rg1e1yt1" path="res://main/main.gd" id="1_xns65"]
+[ext_resource type="PackedScene" uid="uid://dqjgj3q0vl75x" path="res://player/player.tscn" id="2_ws5ps"]
+[ext_resource type="Texture2D" uid="uid://cdhpnfp87w7m" path="res://main/Grass (1).png" id="3_cwgdg"]
+[ext_resource type="Script" uid="uid://qin2bhi86j2j" path="res://main/path_2d.gd" id="4_t36mh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 resource_name = "grass"
-texture = ExtResource("2_0xm2m")
+texture = ExtResource("3_cwgdg")
 0:0/0 = 0
 0:0/0/z_index = -1
 1:0/0 = 0
@@ -37,9 +37,9 @@ _data = {
 point_count = 5
 
 [node name="main" type="Node2D"]
-script = ExtResource("1_h2yge")
+script = ExtResource("1_xns65")
 
-[node name="player" parent="." instance=ExtResource("1_0xm2m")]
+[node name="player" parent="." instance=ExtResource("2_ws5ps")]
 position = Vector2(0, 2)
 scale = Vector2(0.2, 0.2)
 
@@ -58,7 +58,7 @@ layer_0/tile_data = PackedInt32Array(-1, 131072, 1, 65535, 0, 3, 0, 0, 1, -65536
 position = Vector2(-18.0706, -11.6032)
 scale = Vector2(0.3829, 0.42328)
 curve = SubResource("Curve2D_1bvp3")
-script = ExtResource("4_1bvp3")
+script = ExtResource("4_t36mh")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 unique_name_in_owner = true

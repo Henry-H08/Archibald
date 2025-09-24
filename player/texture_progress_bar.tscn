@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0rqr52ox7jem"]
 
-[ext_resource type="Script" uid="uid://dxs8gcc1700fn" path="res://texture_progress_bar.gd" id="1_fcjux"]
-[ext_resource type="Texture2D" uid="uid://beqr0r4qfn5ix" path="res://new_gradient_texture_2d.tres" id="1_umejy"]
+[ext_resource type="Script" uid="uid://dxs8gcc1700fn" path="res://player/texture_progress_bar.gd" id="1_fcjux"]
+[ext_resource type="Texture2D" uid="uid://beqr0r4qfn5ix" path="res://player/new_gradient_texture_2d.tres" id="1_umejy"]
 
 [sub_resource type="Gradient" id="Gradient_fcjux"]
 offsets = PackedFloat32Array(0, 0.653965, 0.656025, 1)
