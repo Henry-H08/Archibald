@@ -4,7 +4,6 @@ extends Node2D
 @onready var camera_2d: Camera2D = $"../Camera2D"
  
 var can_use = true
-var charging = false
 var spells = [magic_missile, fireball]
 var current_spell = magic_missile
 var current = 0

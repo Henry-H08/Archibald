@@ -37,7 +37,7 @@ func _ready():
 	Global.mana = mana
 	Global.full_mana = mana
 	rotate_start = rotation
-	
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func _physics_process(delta):
 	mana = Global.mana
@@ -69,7 +69,7 @@ func _physics_process(delta):
 	Global.player_position = global_position
 	
 	_set_crosshair()
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	
 	
 	
 		
@@ -82,6 +82,7 @@ func _physics_process(delta):
 
 	
 	if Input.is_action_just_pressed("dash"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		if can_dash == true and dash.stopped == false:
 			can_dash = false
 			animated_sprite_2d.scale = Vector2(0.9, 1.1)
@@ -157,6 +158,13 @@ func get_hit():
 		await get_tree().create_timer(1).timeout
 		damage_delay -= 1
 
-func _on_temp_timeout() -> void:
-	print("g")
+
 	
+
+
+func _on_button_pressed() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	get_tree().paused = false
+	get_tree().reload_current_scene()
+	%GameOver.visible = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
