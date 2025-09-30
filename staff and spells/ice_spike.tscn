@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://clcq4ahwnov0b"]
+
+[ext_resource type="Script" uid="uid://nngoodjscut6" path="res://staff and spells/ice_spike.gd" id="1_8tt3l"]
+[ext_resource type="Texture2D" uid="uid://ct8sr0yb48cok" path="res://staff and spells/ice_spikes.png" id="1_e5mcg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tt3l"]
+size = Vector2(6, 12)
+
+[node name="ice_spike" type="Node2D"]
+script = ExtResource("1_8tt3l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 2.186, 1)
+position = Vector2(3, 3.19744e-14)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_e5mcg")
+hframes = 2
+vframes = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 3.55271e-15)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_8tt3l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

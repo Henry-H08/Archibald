@@ -4,7 +4,7 @@ extends Node2D
 @onready var camera_2d: Camera2D = $"../Camera2D"
  
 var can_use = true
-var spells = [magic_missile, fireball]
+var spells = [magic_missile, fireball, triple_ice]
 var current_spell = magic_missile
 var current = 0
 var spell = []
@@ -20,6 +20,14 @@ class fireball:
 	const file: = preload("res://staff and spells/fireball.tscn")
 	const delay: float = 0.7
 	const shake: float = 3
+	
+class triple_ice:
+	const title: String = "triple_ice"
+	const file: = preload("res://staff and spells/triple_ice.tscn")
+	const delay: float = 0.7
+	const shake: float = 3
+
+
 
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
@@ -50,7 +58,7 @@ func _process(delta: float) -> void:
 		else:
 			current -= 1
 	if Input.is_action_just_pressed("spell_right"):
-		if current == 1:
+		if current == 2:
 			current = 0
 		else:
 			current += 1

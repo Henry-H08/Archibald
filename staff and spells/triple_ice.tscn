@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dooxanhia8dy2"]
+
+[ext_resource type="PackedScene" uid="uid://clcq4ahwnov0b" path="res://staff and spells/ice_spike.tscn" id="1_3111l"]
+
+[node name="triple_ice" type="Node2D"]
+
+[node name="ice_spike" parent="." instance=ExtResource("1_3111l")]
+rotation = 0.174533
+
+[node name="ice_spike2" parent="." instance=ExtResource("1_3111l")]
+
+[node name="ice_spike3" parent="." instance=ExtResource("1_3111l")]
+rotation = -0.174533
