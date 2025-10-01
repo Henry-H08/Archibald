@@ -245,7 +245,7 @@ theme_override_font_sizes/font_size = 100
 text = "Game Over"
 uppercase = true
 
-[node name="Button" type="Button" parent="GameOver"]
+[node name="restart_button" type="Button" parent="GameOver"]
 process_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -261,6 +261,64 @@ theme_override_font_sizes/font_size = 58
 text = "Restart"
 flat = true
 
+[node name="start" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+scale = Vector2(0.2, 0.2)
+transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
+
+[node name="ColorRect" type="ColorRect" parent="start"]
+anchors_preset = -1
+anchor_left = 0.342882
+anchor_top = 0.137346
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -530.0
+offset_top = -459.0
+offset_right = 1258.0
+offset_bottom = 832.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.396078, 0.466667, 0.886275, 1)
+
+[node name="Label" type="Label" parent="start/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -488.0
+offset_top = -75.4999
+offset_right = 458.0
+offset_bottom = 75.5001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("9_nvl01")
+theme_override_font_sizes/font_size = 150
+text = "ARCHIBALD!"
+uppercase = true
+
+[node name="start_button" type="Button" parent="start"]
+process_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 169.0
+offset_top = 205.0
+offset_right = 614.0
+offset_bottom = 500.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("9_nvl01")
+theme_override_font_sizes/font_size = 58
+text = "Start"
+flat = true
+
 [connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
 [connection signal="timeout" from="temp" to="." method="_on_temp_timeout"]
-[connection signal="pressed" from="GameOver/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GameOver/restart_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GameOver/restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="start/start_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="start/start_button" to="." method="_on_start_button_pressed"]

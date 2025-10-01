@@ -20,3 +20,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		queue_free()
 		body.get_coin()
 		print("h")
+		
+func _process(delta: float) -> void:
+	if Global.player_health <= 0:
+		queue_free()
