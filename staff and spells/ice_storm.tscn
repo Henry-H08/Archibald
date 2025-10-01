@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://bo0nppejo1d7q"]
+
+[ext_resource type="PackedScene" uid="uid://clcq4ahwnov0b" path="res://staff and spells/ice_spike.tscn" id="1_yq5uw"]
+
+[node name="ice_storm" type="Node2D"]
+
+[node name="ice_spike" parent="." instance=ExtResource("1_yq5uw")]
+rotation = 0.698132
+
+[node name="ice_spike2" parent="." instance=ExtResource("1_yq5uw")]
+rotation = 1.39626
+
+[node name="ice_spike3" parent="." instance=ExtResource("1_yq5uw")]
+rotation = 2.0944
+
+[node name="ice_spike4" parent="." instance=ExtResource("1_yq5uw")]
+rotation = 2.79253
+
+[node name="ice_spike5" parent="." instance=ExtResource("1_yq5uw")]
+rotation = 3.49066
+
+[node name="ice_spike6" parent="." instance=ExtResource("1_yq5uw")]
+rotation = 4.18879
+
+[node name="ice_spike7" parent="." instance=ExtResource("1_yq5uw")]
+rotation = 4.88692
+
+[node name="ice_spike8" parent="." instance=ExtResource("1_yq5uw")]
+rotation = 5.58505
+
+[node name="ice_spike9" parent="." instance=ExtResource("1_yq5uw")]
+rotation = 6.28319

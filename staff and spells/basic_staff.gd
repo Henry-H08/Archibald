@@ -4,7 +4,7 @@ extends Node2D
 @onready var camera_2d: Camera2D = $"../Camera2D"
  
 var can_use = true
-var spells = [magic_missile, fireball, triple_ice]
+var spells = [magic_missile, fireball, triple_ice, ice_storm]
 var current_spell = magic_missile
 var current = 0
 var spell = []
@@ -27,6 +27,12 @@ class triple_ice:
 	const delay: float = 0.7
 	const shake: float = 3
 
+class ice_storm:
+	const title: String = "ice_storm"
+	const file: = preload("res://staff and spells/ice_storm.tscn")
+	const delay: float = 0.3
+	const shake: float = 3
+
 
 
 func _process(delta: float) -> void:
@@ -40,7 +46,7 @@ func _process(delta: float) -> void:
 	else:
 		scale.y = 1
  
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_pressed("shoot"):
 		if can_use == true:
 			camera_2d.apply_shake(current_spell.shake)
 			var bullet_instance = current_spell.file.instantiate()
@@ -58,7 +64,7 @@ func _process(delta: float) -> void:
 		else:
 			current -= 1
 	if Input.is_action_just_pressed("spell_right"):
-		if current == 2:
+		if current == 3:
 			current = 0
 		else:
 			current += 1

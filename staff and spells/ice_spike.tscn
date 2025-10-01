@@ -26,4 +26,10 @@ rotation = 1.5708
 scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_8tt3l")
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bv183sh288w7t"]
+[gd_scene load_steps=16 format=3 uid="uid://bv183sh288w7t"]
 
 [ext_resource type="Script" uid="uid://1b1bjjs5stkq" path="res://player/spell_display.gd" id="1_f3woo"]
 [ext_resource type="Texture2D" uid="uid://cpvfn8c00bxbh" path="res://staff and spells/circle.png" id="2_1v6gx"]
@@ -6,9 +6,33 @@
 [ext_resource type="Texture2D" uid="uid://ckmc8jf2w38lc" path="res://staff and spells/magic_missile.png" id="4_ufrq5"]
 [ext_resource type="Texture2D" uid="uid://ct8sr0yb48cok" path="res://staff and spells/ice_spikes.png" id="5_1v6gx"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w6xgy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrs31"]
 atlas = ExtResource("3_r6tp2")
 region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ai0to"]
+atlas = ExtResource("3_r6tp2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmdn8"]
+atlas = ExtResource("3_r6tp2")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_066k3"]
+atlas = ExtResource("3_r6tp2")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v6gx"]
+atlas = ExtResource("5_1v6gx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufrq5"]
+atlas = ExtResource("5_1v6gx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pslte"]
+atlas = ExtResource("5_1v6gx")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lc0wo"]
 atlas = ExtResource("4_ufrq5")
@@ -22,10 +46,33 @@ region = Rect2(0, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_w6xgy")
+"texture": SubResource("AtlasTexture_lrs31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ai0to")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmdn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_066k3")
 }],
 "loop": true,
 "name": &"fireball",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1v6gx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufrq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pslte")
+}],
+"loop": true,
+"name": &"ice_storm",
 "speed": 5.0
 }, {
 "frames": [{
@@ -54,4 +101,4 @@ texture = ExtResource("2_1v6gx")
 [node name="displayed_spell" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2, -9)
 sprite_frames = SubResource("SpriteFrames_a50ba")
-animation = &"triple_ice"
+animation = &"fireball"
