@@ -1,7 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3pr7x1yib4ud"]
+[gd_scene load_steps=6 format=3 uid="uid://d3pr7x1yib4ud"]
 
 [ext_resource type="Script" uid="uid://c3tnye2x8vvnr" path="res://staff and spells/basic_staff.gd" id="1_iv38b"]
 [ext_resource type="Texture2D" uid="uid://y0jget6p8ysc" path="res://staff and spells/basic_staff.png" id="2_oeqhh"]
+
+[sub_resource type="Gradient" id="Gradient_amqn2"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dw050"]
+gradient = SubResource("Gradient_amqn2")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qtixm"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 0.2
+color = Color(0.707822, 0.78523, 0.97835, 1)
+color_ramp = SubResource("GradientTexture1D_dw050")
 
 [node name="staff" type="Node2D"]
 script = ExtResource("1_iv38b")
@@ -11,3 +30,13 @@ z_index = 3
 rotation = -5.52222
 texture = ExtResource("2_oeqhh")
 offset = Vector2(0, -6)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = -1
+position = Vector2(11, 1)
+rotation = 1.5708
+emitting = false
+amount = 20
+lifetime = 0.41
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_qtixm")

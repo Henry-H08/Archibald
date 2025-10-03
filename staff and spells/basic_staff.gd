@@ -2,7 +2,8 @@ extends Node2D
 @onready var pew: Node2D = $"."
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var camera_2d: Camera2D = $"../Camera2D"
- 
+@onready var particles: GPUParticles2D = $GPUParticles2D
+
 var can_use = true
 var spells = [magic_missile, fireball, triple_ice, ice_storm]
 var current_spell = magic_missile
@@ -54,7 +55,9 @@ func _process(delta: float) -> void:
 			bullet_instance.global_position = pew.global_position
 			bullet_instance.rotation = rotation
 			can_use = false
+			particles.emitting = true
 			await get_tree().create_timer(current_spell.delay).timeout
+			particles.emitting = false
 			can_use = true
 		
 	

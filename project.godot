@@ -21,7 +21,6 @@ Global="*res://general/global.gd"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/scale=6.0
 

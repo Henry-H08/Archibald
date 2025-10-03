@@ -5,9 +5,12 @@
 [node name="triple_ice" type="Node2D"]
 
 [node name="ice_spike" parent="." instance=ExtResource("1_3111l")]
+position = Vector2(3, 4.47035e-08)
 rotation = 0.174533
 
 [node name="ice_spike2" parent="." instance=ExtResource("1_3111l")]
+position = Vector2(3, 0)
 
 [node name="ice_spike3" parent="." instance=ExtResource("1_3111l")]
+position = Vector2(3, -4.47035e-08)
 rotation = -0.174533

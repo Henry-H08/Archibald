@@ -13,8 +13,8 @@ extends CharacterBody2D
 @onready var coins: Label = $coins
 @onready var temp: Timer = $temp
 @onready var camera_2d: Camera2D = $Camera2D
-@onready var game_over: CanvasLayer = %GameOver
-@onready var start: CanvasLayer = %start
+@onready var game_over: CanvasLayer = $GameOver
+@onready var start: CanvasLayer = $start
 
 
 var input := Vector2.ZERO
@@ -32,7 +32,7 @@ var rotate_range = 4
 var rotate_speed = 0.5
 signal dead
 
-var started = 0
+static var has_started := false
 
 func _ready():
 	health_bar.init_health(health)
@@ -41,13 +41,16 @@ func _ready():
 	rotate_start = rotation
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Global.player_health = health
-	if started == 0:
-		%start.visible = true
-		get_tree().paused = true
-		started += 1
-	
+	$start.visible = true
+	get_tree().paused = true
+	if has_started:
+		$start.visible = false
+		get_tree().paused = false
+		return
+	has_started = true
 
 func _physics_process(delta):
+	
 	mana = Global.mana
 	input.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	input.y = Input.get_action_strength("down") - Input.get_action_strength("up")
@@ -82,7 +85,7 @@ func _physics_process(delta):
 	
 		
 	if health <= 0:
-		%GameOver.visible = true
+		$GameOver.visible = true
 		get_tree().paused = true
 		
 		
@@ -177,12 +180,12 @@ func _on_restart_button_pressed() -> void:
 	get_tree().paused = false
 	get_tree().reload_current_scene()
 	
-	%GameOver.visible = false
+	$GameOver.visible = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 
 
 
 func _on_start_button_pressed() -> void:
-	%start.visible = false
+	$start.visible = false
 	get_tree().paused = false
