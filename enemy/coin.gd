@@ -15,11 +15,11 @@ func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("g")
+	
 	if body.has_method("get_coin"):
 		queue_free()
 		body.get_coin()
-		print("h")
+		
 		
 func _process(delta: float) -> void:
 	if Global.player_health <= 0:

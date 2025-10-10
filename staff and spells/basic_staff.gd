@@ -9,11 +9,12 @@ var spells = [magic_missile, fireball, triple_ice, ice_storm]
 var current_spell = magic_missile
 var current = 0
 var spell = []
+var attack_speed = 0
 
 class magic_missile:
 	const title: String = "magic_missile"
 	const file: = preload("res://staff and spells/magic_missile.tscn")
-	const delay: float = 0.1
+	const delay: float = 0.3
 	const shake: float = 1
 
 class fireball:
@@ -37,6 +38,7 @@ class ice_storm:
 
 
 func _process(delta: float) -> void:
+	attack_speed = Global.attack_speed
 	look_at(get_global_mouse_position())
 	current_spell = spells[current]
 
@@ -56,7 +58,7 @@ func _process(delta: float) -> void:
 			bullet_instance.rotation = rotation
 			can_use = false
 			particles.emitting = true
-			await get_tree().create_timer(current_spell.delay).timeout
+			await get_tree().create_timer(current_spell.delay - attack_speed/10).timeout
 			particles.emitting = false
 			can_use = true
 		

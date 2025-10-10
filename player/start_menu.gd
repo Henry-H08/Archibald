@@ -1,0 +1,22 @@
+extends CanvasLayer
+@onready var color_rect: ColorRect = $ColorRect
+@onready var points: Label = $ColorRect/points
+@onready var attack_speed_num: Label = %attack_speed_num
+@onready var attack_speed_button_1: Button = %attack_speed_button1
+@onready var attack_speed_button_2: Button = %attack_speed_button2
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	points.text = "pts: " + str(Global.points)
+	attack_speed_num.text = str(Global.attack_speed)
+
+
+func _on_attack_speed_button_pressed() -> void:
+	if Global.points >= 1:
+		Global.attack_speed += 0.05
+		Global.points -= 1

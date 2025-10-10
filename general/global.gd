@@ -6,3 +6,5 @@ var mana = 0
 var full_mana = 0
 var coins = 0
 var current_spell = 0
+var points = 2
+var attack_speed = 0

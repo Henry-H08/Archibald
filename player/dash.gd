@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 func start_dash(duration):
 	timer.wait_time = duration
 	timer.start()
-	print("u")
+	
 	
 func is_dashing():
 	return !timer.is_stopped()

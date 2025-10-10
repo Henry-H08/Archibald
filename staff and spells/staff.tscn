@@ -6,7 +6,7 @@
 [sub_resource type="Gradient" id="Gradient_amqn2"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_dw050"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_amqn2"]
 gradient = SubResource("Gradient_amqn2")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qtixm"]
@@ -20,7 +20,7 @@ gravity = Vector3(0, 0, 0)
 scale_min = 0.2
 scale_max = 0.2
 color = Color(0.707822, 0.78523, 0.97835, 1)
-color_ramp = SubResource("GradientTexture1D_dw050")
+color_ramp = SubResource("GradientTexture1D_amqn2")
 
 [node name="staff" type="Node2D"]
 script = ExtResource("1_iv38b")

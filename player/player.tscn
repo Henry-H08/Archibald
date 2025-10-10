@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dqjgj3q0vl75x"]
+[gd_scene load_steps=30 format=3 uid="uid://dqjgj3q0vl75x"]
 
 [ext_resource type="Script" uid="uid://bv4uq5f1w44yc" path="res://player/player.gd" id="1_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://c1jje4ygdcrd8" path="res://player/ghost.tscn" id="2_1jxqw"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bv183sh288w7t" path="res://player/spell_display.tscn" id="9_n7ghd"]
 [ext_resource type="FontFile" uid="uid://hivvbyufkiwx" path="res://general/slkscr.ttf" id="9_nvl01"]
 [ext_resource type="Texture2D" uid="uid://cfs22gdv0f0x1" path="res://player/shadow.png" id="12_ivps1"]
+[ext_resource type="Script" uid="uid://bc5fmo0pvqp1n" path="res://player/start_menu.gd" id="13_yllr7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b26j0"]
 size = Vector2(10, 17)
@@ -293,6 +294,8 @@ offset_right = 458.0
 offset_bottom = 75.5001
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_nvl01")
 theme_override_font_sizes/font_size = 150
 text = "ARCHIBALD!"
@@ -314,9 +317,103 @@ theme_override_font_sizes/font_size = 58
 text = "Start"
 flat = true
 
+[node name="stat_menu" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("13_yllr7")
+
+[node name="ColorRect" type="ColorRect" parent="stat_menu"]
+modulate = Color(1, 1, 1, 0.516)
+z_index = -1
+offset_right = 195.0
+offset_bottom = 108.0
+color = Color(0.0233718, 0.0233718, 0.0233718, 1)
+
+[node name="title" type="Label" parent="stat_menu/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -44.0
+offset_right = 10.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_nvl01")
+text = "Stats"
+
+[node name="points" type="Label" parent="stat_menu/ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 15.0
+offset_top = 5.0
+offset_right = 69.0
+offset_bottom = 28.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_nvl01")
+theme_override_font_sizes/font_size = 8
+text = "Pts: "
+metadata/_edit_use_anchors_ = true
+
+[node name="attack_speed_box" type="ColorRect" parent="stat_menu/ColorRect"]
+z_index = -1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -82.5
+offset_top = -34.0
+offset_right = -7.5
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="attack_speed_title" type="Label" parent="stat_menu/ColorRect/attack_speed_box"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 42.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_nvl01")
+theme_override_font_sizes/font_size = 5
+text = "Atk Spd"
+
+[node name="attack_speed_num" type="Label" parent="stat_menu/ColorRect/attack_speed_box"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 39.0
+offset_top = 4.0
+offset_right = 79.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_nvl01")
+theme_override_font_sizes/font_size = 5
+text = "1"
+
+[node name="attack_speed_button" type="Button" parent="stat_menu/ColorRect/attack_speed_box"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 55.0
+offset_right = 65.0
+offset_bottom = 13.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 3
+action_mode = 0
+text = ">"
+
 [connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
 [connection signal="timeout" from="temp" to="." method="_on_temp_timeout"]
-[connection signal="pressed" from="GameOver/restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="GameOver/restart_button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="start/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="GameOver/restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="start/start_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="start/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="stat_menu/ColorRect/attack_speed_box/attack_speed_button" to="stat_menu" method="_on_attack_speed_button_pressed"]

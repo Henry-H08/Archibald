@@ -19,6 +19,7 @@ var damage_values = 0
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	set_health(health)
 	health_bar.max_value = damage_values
 	damage_bar.max_value = damage_values
 	if took_damage == true:

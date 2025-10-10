@@ -15,6 +15,8 @@ extends CharacterBody2D
 @onready var camera_2d: Camera2D = $Camera2D
 @onready var game_over: CanvasLayer = $GameOver
 @onready var start: CanvasLayer = $start
+@onready var start_menu: CanvasLayer = $start_menu
+
 
 
 var input := Vector2.ZERO
@@ -30,6 +32,7 @@ var can_squish = true
 var rotate_start
 var rotate_range = 4
 var rotate_speed = 0.5
+var stat_menu_open = false
 signal dead
 
 static var has_started := false
@@ -39,7 +42,7 @@ func _ready():
 	Global.mana = mana
 	Global.full_mana = mana
 	rotate_start = rotation
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	Global.player_health = health
 	$start.visible = true
 	get_tree().paused = true
@@ -47,10 +50,11 @@ func _ready():
 		$start.visible = false
 		get_tree().paused = false
 		return
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	has_started = true
 
 func _physics_process(delta):
-	
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	mana = Global.mana
 	input.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	input.y = Input.get_action_strength("down") - Input.get_action_strength("up")
@@ -58,6 +62,7 @@ func _physics_process(delta):
 
 	label.text = str(health) + "/6"
 	coins.text = str(Global.coins)
+	
 	
 	
 	if velocity.x != 0 or velocity.y != 0:
@@ -87,13 +92,13 @@ func _physics_process(delta):
 	if health <= 0:
 		$GameOver.visible = true
 		get_tree().paused = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 		
 	
 
 	
 	if Input.is_action_just_pressed("dash"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		if can_dash == true and dash.stopped == false:
 			can_dash = false
 			animated_sprite_2d.scale = Vector2(0.9, 1.1)
@@ -108,8 +113,15 @@ func _physics_process(delta):
 			await get_tree().create_timer(1).timeout
 			can_dash = true
 			
+	if Input.is_action_just_pressed("open_stats"):
+		if stat_menu_open == false:
+			$stat_menu.visible = true
+			stat_menu_open = true
 			
-
+		else:
+			
+			$stat_menu.visible = false
+			stat_menu_open = false
 	
 	var speed = 15
 	if speed != 15:
