@@ -113,15 +113,7 @@ func _physics_process(delta):
 			await get_tree().create_timer(1).timeout
 			can_dash = true
 			
-	if Input.is_action_just_pressed("open_stats"):
-		if stat_menu_open == false:
-			$stat_menu.visible = true
-			stat_menu_open = true
-			
-		else:
-			
-			$stat_menu.visible = false
-			stat_menu_open = false
+	
 	
 	var speed = 15
 	if speed != 15:
