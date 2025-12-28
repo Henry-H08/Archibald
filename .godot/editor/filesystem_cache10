@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1766948901
+::res://::1766948991
 color_rect.tscn::PackedScene::3521121834935895447::1766948863::0::1::::<><><>0<>0<><>::uid://861tj8gdo8rb::::res://player/test.gdshader
 export_presets.cfg::TextFile::-1::1766948863::0::1::::<><><>0<>0<><>::
 ::res://enemy/::1766948537
@@ -28,7 +28,8 @@ main.tscn::PackedScene::5703769677356035337::1766948864::0::1::::<><><>0<>0<><>:
 path_2d.gd::GDScript::1140374121328185867::1752324970::0::1::::<>Path2D<><>0<>0<><>::
 rock.tscn::PackedScene::7267155305364798212::1766948864::0::1::::<><><>0<>0<><>::uid://c2enasedwegl7::::res://main/Rocks.png
 Rocks.png::CompressedTexture2D::6676987929300670094::1766948864::1766948864::1::::<><><>0<>0<>08ab7ad0638efc79ff8ff0e19f030928<>res://.godot/imported/Rocks.png-295295c35de812205481d3e3012933bf.ctex::
-::res://player/::1766948864
+::res://player/::1766949356
+book.png::CompressedTexture2D::2476506380187073017::1765207957::1766949359::1::::<><><>0<>0<>9bf7d8e3a0baf2ea5b8c55c663e11019<>res://.godot/imported/book.png-98353c55ba6588545030d8d60944e61a.ctex::
 camera_2d.gd::GDScript::5908168486926584173::1757701196::0::1::::<>Camera2D<><>0<>0<><>::
 crosshair.png::CompressedTexture2D::8610960917352138029::1750702694::1766948537::1::::<><><>0<>0<>8691c8b3558080586817806b17be2058<>res://.godot/imported/crosshair.png-297ebeb4b4366d1105121af24ebea38c.ctex::
 dash.gd::GDScript::8406819132761283960::1760009898::0::1::::<>Node2D<><>0<>0<><>::

@@ -470,6 +470,6 @@ texture_hover = ExtResource("27_b8hi5")
 
 [connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
 [connection signal="timeout" from="temp" to="." method="_on_temp_timeout"]
-[connection signal="pressed" from="GameOver/restart_button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="GameOver/restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="GameOver/restart_button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="start/ColorRect/start_button" to="." method="_on_start_button_pressed"]
