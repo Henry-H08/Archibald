@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqfwmkxc575b4"]
+
+[ext_resource type="Shader" uid="uid://861tj8gdo8rb" path="res://player/test.gdshader" id="1_h40d6"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_h40d6"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_var0u"]
+resource_local_to_scene = true
+shader = ExtResource("1_h40d6")
+shader_parameter/tex = SubResource("ViewportTexture_h40d6")
+shader_parameter/mask_type = 1
+shader_parameter/curve = 0.0
+shader_parameter/sharpness = 0.666667
+shader_parameter/color_offset = 0.0
+shader_parameter/mask_brightness = 1.0
+shader_parameter/scanline_brightness = 1.0
+shader_parameter/min_scanline_thickness = 0.5
+shader_parameter/aspect = 0.75
+shader_parameter/wobble_strength = 0.0
+
+[node name="ColorRect" type="ColorRect"]
+material = SubResource("ShaderMaterial_var0u")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="."]

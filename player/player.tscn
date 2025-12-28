@@ -1,0 +1,475 @@
+[gd_scene load_steps=49 format=3 uid="uid://dqjgj3q0vl75x"]
+
+[ext_resource type="Script" uid="uid://bv4uq5f1w44yc" path="res://player/player.gd" id="1_i3pqv"]
+[ext_resource type="PackedScene" uid="uid://c1jje4ygdcrd8" path="res://player/ghost.tscn" id="2_1jxqw"]
+[ext_resource type="Shader" uid="uid://cw7wvyksa1cmw" path="res://player/ingame.gdshader" id="4_e7oew"]
+[ext_resource type="Texture2D" uid="uid://duxhjectu76ib" path="res://player/crosshair.png" id="4_hqtel"]
+[ext_resource type="Script" uid="uid://cqf7w3t4dklof" path="res://player/camera_2d.gd" id="4_n7ghd"]
+[ext_resource type="PackedScene" uid="uid://d3pr7x1yib4ud" path="res://staff and spells/staff.tscn" id="4_sweqy"]
+[ext_resource type="PackedScene" uid="uid://fbr8mttax4x4" path="res://player/dash.tscn" id="6_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://177yu7us6c7c" path="res://player/run.png" id="6_n7ghd"]
+[ext_resource type="PackedScene" uid="uid://bgnuolc0lq1pi" path="res://player/health_bar.tscn" id="8_dw050"]
+[ext_resource type="Texture2D" uid="uid://0sknwbu61l41" path="res://enemy/coin.png" id="9_b26j0"]
+[ext_resource type="PackedScene" uid="uid://bv183sh288w7t" path="res://player/spell_display.tscn" id="9_n7ghd"]
+[ext_resource type="FontFile" uid="uid://hivvbyufkiwx" path="res://general/slkscr.ttf" id="9_nvl01"]
+[ext_resource type="Texture2D" uid="uid://cfs22gdv0f0x1" path="res://player/shadow.png" id="12_ivps1"]
+[ext_resource type="FontFile" uid="uid://b5wkm2ql0ikt2" path="res://general/alagard_by_pix3m-d6awiwp.ttf" id="13_kb6p2"]
+[ext_resource type="Texture2D" uid="uid://ojohn0hmalaa" path="res://player/LIMBOBACKGROIUNDKBSD.PNG.PNG" id="14_wodsf"]
+[ext_resource type="Shader" uid="uid://861tj8gdo8rb" path="res://player/test.gdshader" id="15_tqiix"]
+[ext_resource type="Texture2D" uid="uid://doeuay76gs2qr" path="res://player/limbo backgroundkadjfnblkad.PNG.PNG" id="16_32hag"]
+[ext_resource type="Texture2D" uid="uid://bbjvx0gnnwnqf" path="res://player/book.png" id="18_65viv"]
+[ext_resource type="Script" uid="uid://cp6rr6b8iv42d" path="res://player/menu.gd" id="20_x7c3f"]
+[ext_resource type="Texture2D" uid="uid://yovq23eebiav" path="res://player/bookmarks/stat_mark.png" id="22_bjvpn"]
+[ext_resource type="Texture2D" uid="uid://bjee1bvmf5bs7" path="res://player/bookmarks/stat_mark_pressed.png" id="23_s7qer"]
+[ext_resource type="Texture2D" uid="uid://q2f7mqi2fgrn" path="res://player/bookmarks/setting_mark.png" id="24_uw77l"]
+[ext_resource type="Texture2D" uid="uid://cs02t2jyq6xf7" path="res://player/bookmarks/setting_mark_pressed.png" id="25_rptt4"]
+[ext_resource type="Texture2D" uid="uid://dlhlbiy76atmk" path="res://player/bookmarks/options_mark.png" id="26_r7pn3"]
+[ext_resource type="Texture2D" uid="uid://in2uvssplv5s" path="res://player/bookmarks/options_mark_pressed.png" id="27_b8hi5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tqiix"]
+shader = ExtResource("15_tqiix")
+shader_parameter/interval = 0.5
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 20.0
+shader_parameter/intensityY = 20.0
+shader_parameter/seed = 42.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s7qer"]
+shader = ExtResource("4_e7oew")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 0.5
+shader_parameter/warp_amount = 0.05
+shader_parameter/noise_amount = 0.03
+shader_parameter/interference_amount = 0.2
+shader_parameter/grille_amount = 0.05
+shader_parameter/grille_size = 1.0
+shader_parameter/vignette_amount = 0.5
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.3
+shader_parameter/roll_speed = 1.0
+shader_parameter/scan_line_strength = -8.0
+shader_parameter/pixel_strength = -2.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b26j0"]
+size = Vector2(10, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_606se"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1c27"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op7ga"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q13i1"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pylmc"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbfsw"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tmop"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ahtn"]
+atlas = ExtResource("6_n7ghd")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7ghd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b26j0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urp6f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwjto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_606se")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1c27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op7ga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q13i1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pylmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbfsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tmop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ahtn")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_1jxqw"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ebec5"]
+gradient = SubResource("Gradient_1jxqw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1jxqw"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 0.2
+color_ramp = SubResource("GradientTexture1D_ebec5")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x7c3f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bjvpn"]
+shader = ExtResource("15_tqiix")
+shader_parameter/interval = 0.3
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 0.2
+shader_parameter/intensityY = 0.2
+shader_parameter/seed = 42.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g4c7l"]
+shader = ExtResource("15_tqiix")
+shader_parameter/interval = 0.3
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 0.2
+shader_parameter/intensityY = 0.2
+shader_parameter/seed = 42.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_65viv"]
+shader = ExtResource("15_tqiix")
+shader_parameter/interval = 0.3
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 0.2
+shader_parameter/intensityY = 0.2
+shader_parameter/seed = 42.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c35mf"]
+shader = ExtResource("15_tqiix")
+shader_parameter/interval = 0.3
+shader_parameter/timeDelay = 0.0
+shader_parameter/intensityX = 0.2
+shader_parameter/intensityY = 0.2
+shader_parameter/seed = 1.0
+
+[node name="player" type="CharacterBody2D"]
+material = SubResource("ShaderMaterial_tqiix")
+script = ExtResource("1_i3pqv")
+ghost_node = ExtResource("2_1jxqw")
+
+[node name="startEffect" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="startEffectRect" type="ColorRect" parent="startEffect"]
+material = SubResource("ShaderMaterial_s7qer")
+offset_left = -167.0
+offset_top = -92.0
+offset_right = 985.0
+offset_bottom = 556.0
+mouse_filter = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_b26j0")
+
+[node name="crosshair" type="Sprite2D" parent="."]
+process_mode = 3
+position = Vector2(2163, -760)
+texture = ExtResource("4_hqtel")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+script = ExtResource("4_n7ghd")
+
+[node name="pew" parent="." instance=ExtResource("4_sweqy")]
+position = Vector2(1, 10)
+rotation = -1.53065
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n7ghd")
+animation = &"idle"
+
+[node name="Dash" parent="." instance=ExtResource("6_2hs0m")]
+
+[node name="GhostTimer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = -1
+position = Vector2(0, 15)
+emitting = false
+amount = 20
+process_material = SubResource("ParticleProcessMaterial_1jxqw")
+
+[node name="temp" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[node name="shadow" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.481)
+z_index = -2
+position = Vector2(-1, 3)
+texture = ExtResource("12_ivps1")
+hframes = 2
+vframes = 2
+
+[node name="Health_Bar" parent="." instance=ExtResource("8_dw050")]
+material = SubResource("ShaderMaterial_x7c3f")
+offset_left = -152.0
+offset_top = -84.0
+offset_right = -66.0
+offset_bottom = -79.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Health_Bar"]
+material = SubResource("ShaderMaterial_bjvpn")
+layout_mode = 1
+offset_right = 11.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("9_nvl01")
+theme_override_font_sizes/font_size = 5
+text = "6/6"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="spell_display" parent="." instance=ExtResource("9_n7ghd")]
+material = SubResource("ShaderMaterial_g4c7l")
+position = Vector2(138, -70)
+
+[node name="coins" type="Label" parent="."]
+offset_left = -142.0
+offset_top = -75.0
+offset_right = -102.0
+offset_bottom = -52.0
+theme_override_fonts/font = ExtResource("9_nvl01")
+theme_override_font_sizes/font_size = 8
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="coins"]
+position = Vector2(-7, -8)
+texture = ExtResource("9_b26j0")
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+visible = false
+scale = Vector2(0.2, 0.2)
+transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = -1
+anchor_left = 0.342882
+anchor_top = 0.137346
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -530.0
+offset_top = -459.0
+offset_right = 1258.0
+offset_bottom = 832.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.0980392, 0.0980392, 0.0980392, 0.905882)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_kb6p2")
+theme_override_font_sizes/font_size = 100
+text = "Game Over"
+uppercase = true
+
+[node name="restart_button" type="Button" parent="GameOver"]
+process_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 169.0
+offset_top = 205.0
+offset_right = 614.0
+offset_bottom = 500.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("13_kb6p2")
+theme_override_font_sizes/font_size = 58
+text = "Restart"
+flat = true
+
+[node name="start" type="ParallaxBackground" parent="."]
+process_mode = 3
+visible = false
+
+[node name="Parallax2D" type="Parallax2D" parent="start"]
+repeat_size = Vector2(512, 0)
+autoscroll = Vector2(-10, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="start/Parallax2D"]
+z_index = 9
+position = Vector2(143, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("14_wodsf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="start/Parallax2D"]
+z_index = 10
+position = Vector2(143, 2)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_32hag")
+
+[node name="ColorRect" type="ColorRect" parent="start"]
+z_index = 8
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -272.0
+offset_top = -244.0
+offset_right = 229.0
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.666011, 0.770916, 0.922373, 1)
+
+[node name="Label" type="Label" parent="start/ColorRect"]
+z_index = 11
+material = SubResource("ShaderMaterial_65viv")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -11.5
+offset_right = 62.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_kb6p2")
+text = "ARCHIBALD!"
+
+[node name="start_button" type="Button" parent="start/ColorRect"]
+z_index = 10
+material = SubResource("ShaderMaterial_c35mf")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.5
+offset_top = 6.5
+offset_right = 41.5
+offset_bottom = 29.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_kb6p2")
+text = "Start"
+
+[node name="menu" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+script = ExtResource("20_x7c3f")
+
+[node name="book" type="Sprite2D" parent="menu"]
+z_index = 15
+position = Vector2(96.249985, 60.37498)
+scale = Vector2(0.6152345, 0.6064455)
+texture = ExtResource("18_65viv")
+
+[node name="ColorRect" type="ColorRect" parent="menu"]
+z_index = 14
+offset_left = -59.0
+offset_top = -42.0
+offset_right = 272.0
+offset_bottom = 193.0
+color = Color(0.14117648, 0.14117648, 0.14117648, 0.9843137)
+
+[node name="stat_mark_button" type="TextureButton" parent="menu"]
+z_index = 14
+offset_left = 34.0
+offset_top = -8.0
+offset_right = 47.0
+offset_bottom = 12.0
+texture_normal = ExtResource("22_bjvpn")
+texture_pressed = ExtResource("23_s7qer")
+texture_hover = ExtResource("23_s7qer")
+
+[node name="settings_mark_button" type="TextureButton" parent="menu"]
+z_index = 14
+offset_left = 51.0
+offset_top = -8.0
+offset_right = 64.0
+offset_bottom = 12.0
+texture_normal = ExtResource("24_uw77l")
+texture_pressed = ExtResource("25_rptt4")
+texture_hover = ExtResource("25_rptt4")
+
+[node name="TextureButton" type="TextureButton" parent="menu"]
+z_index = 14
+offset_left = 68.0
+offset_top = -8.0
+offset_right = 81.0
+offset_bottom = 12.0
+texture_normal = ExtResource("26_r7pn3")
+texture_pressed = ExtResource("27_b8hi5")
+texture_hover = ExtResource("27_b8hi5")
+
+[connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
+[connection signal="timeout" from="temp" to="." method="_on_temp_timeout"]
+[connection signal="pressed" from="GameOver/restart_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GameOver/restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="start/ColorRect/start_button" to="." method="_on_start_button_pressed"]

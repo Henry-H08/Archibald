@@ -1,0 +1,20 @@
+res://enemy/coin.tscn::b9d1f17c1a1d32ed65f8a8b4e88eac48::1759327158::res://.godot/exported/133200997/export-3c2a5c3bebfd5d2a7f067490eb8c2ccf-coin.scn
+res://enemy/enemy.tscn::79dbc1f517ff372fbd2ee0f4fb1a765a::1764349342::res://.godot/exported/133200997/export-7a7ef7eb2aa2d13d5f77526465e49dfc-enemy.scn
+res://general/global.tscn::9cb6486b6978fdc085b64c0b93c29ac9::1758721034::res://.godot/exported/133200997/export-b1d805ec785a74404f93c765183ed0a7-global.scn
+res://main/main.tscn::3133f671431c61a8d855586bb1e05d93::1764349342::res://.godot/exported/133200997/export-435f623093a3e2498450e744191b98a6-main.scn
+res://main/rock.tscn::841a173d3e999d3c87ba9ca4896b4d24::1760436976::res://.godot/exported/133200997/export-089427ebd6b6207599132811100f81d6-rock.scn
+res://player/dash.tscn::c0ae39bcafecd61687b19aad7b9f4be3::1758720726::res://.godot/exported/133200997/export-f4dc613449ccd3e05a4742c8b25acf6e-dash.scn
+res://player/ghost.tscn::dbbfd0f2451674d3a09f811a5b41d72d::1758720778::res://.godot/exported/133200997/export-470da1bb875b689cf363669a5de6d68b-ghost.scn
+res://player/health_bar.tscn::bafe5853230876d016e70c0d8774501f::1758720744::res://.godot/exported/133200997/export-75b04dbbe38c078215c4822de9f63480-health_bar.scn
+res://player/new_gradient_texture_2d.tres::3ee40d4e64f671fe83a700237934860b::1756806770::res://.godot/exported/133200997/export-d35b853d00f8da0ad7051f7cf3e668e6-new_gradient_texture_2d.res
+res://player/player.tscn::505e9e1c6f4b147ca90542b53eba857c::1766895639::res://.godot/exported/133200997/export-753d15e03e0182f9d550ac833b42bb41-player.scn
+res://player/spell_display.tscn::495b322b1cbfafcc1d568fbdf146480a::1764349342::res://.godot/exported/133200997/export-23a25440efb650ca36f6f5e4a20593d5-spell_display.scn
+res://player/texture_progress_bar.tscn::27c4f1af73f1ca310d83370ff7425115::1758721042::res://.godot/exported/133200997/export-7e289314fdc18829be5c0b75776284cd-texture_progress_bar.scn
+res://staff and spells/explosion.tscn::e701de5e4a294054c59c3c9507e492f6::1757847346::res://.godot/exported/133200997/export-36c185b3198c9c6ddab8a43d96d5234c-explosion.scn
+res://staff and spells/fireball.tscn::232ffe7f74f326a2b1b4674d2b282494::1759185678::res://.godot/exported/133200997/export-a71a95b2a99262d065f341fe57436121-fireball.scn
+res://staff and spells/ice_spike.tscn::22f51cb0a39d34c1ed1f6d02111a65ee::1759327158::res://.godot/exported/133200997/export-5d94a7cdfb43c7ecff91cc30b756ba25-ice_spike.scn
+res://staff and spells/ice_storm.tscn::2348e77e76edcde1be8b7b87a844ed96::1759327158::res://.godot/exported/133200997/export-99f89023dc5736a55c2b473fc7415c4a-ice_storm.scn
+res://staff and spells/magic_missile.tscn::2291193326cbc9eab4f81bc4ff36f226::1759486358::res://.godot/exported/133200997/export-0eb9effd969bbfa9ec7525dca457e472-magic_missile.scn
+res://staff and spells/staff.tscn::f650ebcf5e4007c7e8e342236b27b28c::1764349342::res://.godot/exported/133200997/export-485256ccbb59522b429cc3c28403dbb7-staff.scn
+res://staff and spells/triple_ice.tscn::cd5a5cdf642206dadebdbc448b544b9f::1759486392::res://.godot/exported/133200997/export-e15d7fe55bbfda1864ece42a856a0c20-triple_ice.scn
+res://color_rect.tscn::705b99b3e0f248944af444bc41bc9758::1762167948::res://.godot/exported/133200997/export-80b8f1f142b7ee73cd489c14b0f7d31e-color_rect.scn
