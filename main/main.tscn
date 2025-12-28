@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=4 uid="uid://cni7iu06uvd42"]
+[gd_scene load_steps=9 format=4 uid="uid://cni7iu06uvd42"]
 
 [ext_resource type="Script" uid="uid://bqdk2rg1e1yt1" path="res://main/main.gd" id="1_xns65"]
 [ext_resource type="PackedScene" uid="uid://dqjgj3q0vl75x" path="res://player/player.tscn" id="2_ws5ps"]
 [ext_resource type="Texture2D" uid="uid://cdhpnfp87w7m" path="res://main/Grass (1).png" id="3_cwgdg"]
 [ext_resource type="Script" uid="uid://qin2bhi86j2j" path="res://main/path_2d.gd" id="4_t36mh"]
+[ext_resource type="AudioStream" uid="uid://dcpq1cniah8b7" path="res://main/mainsong.wav" id="5_3wy1v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c651c"]
 texture = ExtResource("3_cwgdg")
@@ -57,6 +58,12 @@ position = Vector2(-86, -60)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.01
 autostart = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
+stream = ExtResource("5_3wy1v")
+autoplay = true
+max_distance = 4096.0
 
 [connection signal="dead" from="player" to="." method="_on_player_dead"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
