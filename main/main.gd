@@ -1,9 +1,12 @@
 extends Node2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready():
 	spawn_enemy()
 	spawn_enemy()
 	spawn_enemy()
+	
+	
 
 func spawn_enemy():
 	var new_enemy = preload("res://enemy/enemy.tscn").instantiate()
