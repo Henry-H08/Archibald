@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dqjgj3q0vl75x"]
+[gd_scene load_steps=53 format=3 uid="uid://dqjgj3q0vl75x"]
 
 [ext_resource type="Script" uid="uid://bv4uq5f1w44yc" path="res://player/player.gd" id="1_i3pqv"]
 [ext_resource type="PackedScene" uid="uid://c1jje4ygdcrd8" path="res://player/ghost.tscn" id="2_1jxqw"]
@@ -23,8 +23,12 @@
 [ext_resource type="Texture2D" uid="uid://bjee1bvmf5bs7" path="res://player/bookmarks/stat_mark_pressed.png" id="23_s7qer"]
 [ext_resource type="Texture2D" uid="uid://q2f7mqi2fgrn" path="res://player/bookmarks/setting_mark.png" id="24_uw77l"]
 [ext_resource type="Texture2D" uid="uid://cs02t2jyq6xf7" path="res://player/bookmarks/setting_mark_pressed.png" id="25_rptt4"]
+[ext_resource type="Texture2D" uid="uid://dypj7rk8crlj1" path="res://staff and spells/fireball.png" id="26_7pqkx"]
 [ext_resource type="Texture2D" uid="uid://dlhlbiy76atmk" path="res://player/bookmarks/options_mark.png" id="26_r7pn3"]
+[ext_resource type="Script" uid="uid://bik04bc6fafuo" path="res://player/spells_menu.gd" id="26_uw77l"]
 [ext_resource type="Texture2D" uid="uid://in2uvssplv5s" path="res://player/bookmarks/options_mark_pressed.png" id="27_b8hi5"]
+[ext_resource type="Texture2D" uid="uid://4nm6hmjffnrf" path="res://player/upgradebar.png" id="28_rptt4"]
+[ext_resource type="Texture2D" uid="uid://cpvfn8c00bxbh" path="res://staff and spells/circle.png" id="29_r7pn3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tqiix"]
 shader = ExtResource("15_tqiix")
@@ -454,22 +458,68 @@ offset_left = 51.0
 offset_top = -8.0
 offset_right = 64.0
 offset_bottom = 12.0
-texture_normal = ExtResource("24_uw77l")
-texture_pressed = ExtResource("25_rptt4")
-texture_hover = ExtResource("25_rptt4")
+texture_normal = ExtResource("26_r7pn3")
+texture_pressed = ExtResource("27_b8hi5")
+texture_hover = ExtResource("27_b8hi5")
 
-[node name="TextureButton" type="TextureButton" parent="menu"]
+[node name="spells_mark_button" type="TextureButton" parent="menu"]
 z_index = 14
 offset_left = 68.0
 offset_top = -8.0
 offset_right = 81.0
 offset_bottom = 12.0
-texture_normal = ExtResource("26_r7pn3")
-texture_pressed = ExtResource("27_b8hi5")
-texture_hover = ExtResource("27_b8hi5")
+texture_normal = ExtResource("24_uw77l")
+texture_pressed = ExtResource("25_rptt4")
+texture_hover = ExtResource("25_rptt4")
+
+[node name="stat_menu" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="attack_speed_label" type="Label" parent="stat_menu"]
+z_index = 100
+offset_left = 46.0
+offset_top = 42.0
+offset_right = 86.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(4.8063607, 0, 18.892157, 1)
+text = "h"
+
+[node name="settings_menu" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="settings_menu_label" type="Label" parent="settings_menu"]
+z_index = 101
+offset_left = 46.0
+offset_top = 42.0
+offset_right = 86.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(4.8063607, 0, 18.892157, 1)
+text = "G"
+
+[node name="spells_menu" type="CanvasLayer" parent="."]
+script = ExtResource("26_uw77l")
+
+[node name="fireball" type="Sprite2D" parent="spells_menu"]
+position = Vector2(39, 21)
+texture = ExtResource("26_7pqkx")
+hframes = 2
+vframes = 2
+
+[node name="fireball_button" type="TextureButton" parent="spells_menu"]
+process_mode = 3
+offset_left = 10.0
+offset_top = 26.0
+offset_right = 74.0
+offset_bottom = 90.0
+texture_normal = ExtResource("28_rptt4")
+texture_pressed = ExtResource("29_r7pn3")
 
 [connection signal="timeout" from="GhostTimer" to="." method="_on_ghost_timer_timeout"]
 [connection signal="timeout" from="temp" to="." method="_on_temp_timeout"]
-[connection signal="pressed" from="GameOver/restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="GameOver/restart_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GameOver/restart_button" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="start/ColorRect/start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="menu/stat_mark_button" to="menu" method="_on_stat_mark_button_pressed"]
+[connection signal="pressed" from="menu/settings_mark_button" to="menu" method="_on_settings_mark_button_pressed"]
+[connection signal="pressed" from="menu/spells_mark_button" to="menu" method="_on_spells_mark_button_pressed"]
+[connection signal="pressed" from="spells_menu/fireball_button" to="spells_menu" method="_on_fireball_button_pressed"]

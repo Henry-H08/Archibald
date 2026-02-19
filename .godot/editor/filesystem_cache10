@@ -1,7 +1,7 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1766948991
+::res://::1771351491
 color_rect.tscn::PackedScene::3521121834935895447::1766948863::0::1::::<><><>0<>0<><>::uid://861tj8gdo8rb::::res://player/test.gdshader
-export_presets.cfg::TextFile::-1::1766948863::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1766960592::0::1::::<><><>0<>0<><>::
 ::res://enemy/::1766948537
 cheep_green.png::CompressedTexture2D::936946064762108492::1750620222::1766948537::1::::<><><>0<>0<>9fdf89c6860c2f094ee9ca12f7b4db90<>res://.godot/imported/cheep_green.png-2e21f3f19147659973d41cb55f1f5c35.ctex::
 coin.gd::GDScript::3470968942243812257::1760009916::0::1::::<>Node2D<><>0<>0<><>::
@@ -9,27 +9,27 @@ coin.png::CompressedTexture2D::1792511433781991968::1756307930::1766948537::1:::
 coin.tscn::PackedScene::626154410166913678::1759327158::0::1::::<><><>0<>0<><>::uid://bppml7gafl25r::::res://enemy/coin.gd<>uid://0sknwbu61l41::::res://enemy/coin.png
 enemy.gd::GDScript::1429062514900328393::1760101918::0::1::::<>CharacterBody2D<><>0<>0<><>::
 enemy.tscn::PackedScene::539252620857357110::1764349342::0::1::::<><><>0<>0<><>::uid://umiplfqyi2c0::::res://enemy/enemy.gd<>uid://nl4mnx8q4ad5::::res://enemy/cheep_green.png
-::res://exports/::1766948863
-Archibald!.apple-touch-icon.png::CompressedTexture2D::670925466096231420::1766895779::1766948537::1::::<><><>0<>0<>ed074137740f1c01f5c1af74e576e400<>res://.godot/imported/Archibald!.apple-touch-icon.png-16114f58f74fc95455a83bdf5d97be09.ctex::
-Archibald!.icon.png::CompressedTexture2D::9030587286965435646::1766895779::1766948537::1::::<><><>0<>0<>848c124522c4c2c1c53af0c940cb843c<>res://.godot/imported/Archibald!.icon.png-c7fb11c2527a50294d21fbf44a6b11fb.ctex::
-Archibald!.png::CompressedTexture2D::4193154438780193551::1766895779::1766948537::1::::<><><>0<>0<>85a7778f6413d7e33de0610695c7e9c3<>res://.godot/imported/Archibald!.png-7b5508304b7401a9efb795cf2906f73d.ctex::
-::res://general/::1766948864
+::res://exports/::1766960591
+Archibald!.apple-touch-icon.png::CompressedTexture2D::670925466096231420::1766960591::1766948537::1::::<><><>0<>0<>ed074137740f1c01f5c1af74e576e400<>res://.godot/imported/Archibald!.apple-touch-icon.png-16114f58f74fc95455a83bdf5d97be09.ctex::
+Archibald!.icon.png::CompressedTexture2D::9030587286965435646::1766960591::1766948537::1::::<><><>0<>0<>848c124522c4c2c1c53af0c940cb843c<>res://.godot/imported/Archibald!.icon.png-c7fb11c2527a50294d21fbf44a6b11fb.ctex::
+Archibald!.png::CompressedTexture2D::4193154438780193551::1766960591::1766948537::1::::<><><>0<>0<>85a7778f6413d7e33de0610695c7e9c3<>res://.godot/imported/Archibald!.png-7b5508304b7401a9efb795cf2906f73d.ctex::
+::res://general/::1770821129
 alagard_by_pix3m-d6awiwp.ttf::FontFile::4538132346258760313::1377980836::1766948537::1::::<><><>0<>0<>0e11f39ba805b694665511062374b37e<>res://.godot/imported/alagard_by_pix3m-d6awiwp.ttf-7f703bb729d243d4e3766a7ace508247.fontdata::
 export_presets.cfg::TextFile::-1::1758720414::0::1::::<><><>0<>0<><>::
-global.gd::GDScript::8637075763104018547::1766948864::0::1::::<>Node2D<><>0<>0<><>::
+global.gd::GDScript::8637075763104018547::1770821129::0::1::::<>Node2D<><>0<>0<><>::
 global.tscn::PackedScene::6653969726145938097::1758721034::0::1::::<><><>0<>0<><>::uid://dvb4m1tnemu6f::::res://general/global.gd
 headshot.png::CompressedTexture2D::2360322615826516629::1766948864::1766948864::1::::<><><>0<>0<>7e65792a8c301e9b8ac79af57d969382<>res://.godot/imported/headshot.png-446e4473aa6b3da4c6eb91d16b7c1086.ctex::
 icon.svg::CompressedTexture2D::8341480273259020465::1750609094::1766948537::1::::<><><>0<>0<>6a1d53d45fd0792c3cf047391157455e<>res://.godot/imported/icon.svg-3dd9ac71dea67b10c5661667639b6e68.ctex::
 slkscr.ttf::FontFile::509149576533252803::1757714478::1766948537::1::::<><><>0<>0<>bf9ac1185a3d4a0355be45181cac4283<>res://.godot/imported/slkscr.ttf-65d29b28b3fc6b6a402db49c0a8697cb.fontdata::
-::res://main/::1766955676
+::res://main/::1770651422
 Grass (1).png::CompressedTexture2D::147023317650671444::1750850162::1766948537::1::::<><><>0<>0<>cd50c139402671491e0ca6dd6156e8de<>res://.godot/imported/Grass (1).png-df8182d2adfb391b6fb52babc91af52d.ctex::
-main.gd::GDScript::3516291604880390992::1758720956::0::1::::<>Node2D<><>0<>0<><>::
-main.tscn::PackedScene::5703769677356035337::1766955676::0::1::::<><><>0<>0<><>::uid://bqdk2rg1e1yt1::::res://main/main.gd<>uid://dqjgj3q0vl75x::::res://player/player.tscn<>uid://cdhpnfp87w7m::::res://main/Grass (1).png<>uid://qin2bhi86j2j::::res://main/path_2d.gd<>uid://dcpq1cniah8b7::::res://main/mainsong.wav
+main.gd::GDScript::3516291604880390992::1766960583::0::1::::<>Node2D<><>0<>0<><>::
+main.tscn::PackedScene::5703769677356035337::1770651422::0::1::::<><><>0<>0<><>::uid://bqdk2rg1e1yt1::::res://main/main.gd<>uid://dqjgj3q0vl75x::::res://player/player.tscn<>uid://cdhpnfp87w7m::::res://main/Grass (1).png<>uid://qin2bhi86j2j::::res://main/path_2d.gd<>uid://dcpq1cniah8b7::::res://main/mainsong.wav
 mainsong.wav::AudioStreamWAV::7331623432685009726::1766955021::1766955690::1::::<><><>0<>0<>03013c9eaf900b86fce156503223de5d<>res://.godot/imported/mainsong.wav-ddfd974e441ed6df94b1a7733e8cb16f.sample::
-path_2d.gd::GDScript::1140374121328185867::1752324970::0::1::::<>Path2D<><>0<>0<><>::
+path_2d.gd::GDScript::1140374121328185867::1768926135::0::1::::<>Path2D<><>0<>0<><>::
 rock.tscn::PackedScene::7267155305364798212::1766948864::0::1::::<><><>0<>0<><>::uid://c2enasedwegl7::::res://main/Rocks.png
 Rocks.png::CompressedTexture2D::6676987929300670094::1766948864::1766948864::1::::<><><>0<>0<>08ab7ad0638efc79ff8ff0e19f030928<>res://.godot/imported/Rocks.png-295295c35de812205481d3e3012933bf.ctex::
-::res://player/::1766949368
+::res://player/::1771207003
 book.png::CompressedTexture2D::2476506380187073017::1765207957::1766949359::1::::<><><>0<>0<>9bf7d8e3a0baf2ea5b8c55c663e11019<>res://.godot/imported/book.png-98353c55ba6588545030d8d60944e61a.ctex::
 camera_2d.gd::GDScript::5908168486926584173::1757701196::0::1::::<>Camera2D<><>0<>0<><>::
 crosshair.png::CompressedTexture2D::8610960917352138029::1750702694::1766948537::1::::<><><>0<>0<>8691c8b3558080586817806b17be2058<>res://.godot/imported/crosshair.png-297ebeb4b4366d1105121af24ebea38c.ctex::
@@ -43,12 +43,13 @@ health_bar.tscn::PackedScene::2835630579291775422::1758720744::0::1::::<><><>0<>
 ingame.gdshader::Shader::6384430567893002310::1766948864::0::1::::<><><>0<>0<><>::
 limbo backgroundkadjfnblkad.PNG.PNG::CompressedTexture2D::8151379024294725101::1766948864::1766948864::1::::<><><>0<>0<>7239388e8579b9209e89e65d8d695c3d<>res://.godot/imported/limbo backgroundkadjfnblkad.PNG.PNG-286c394764887b2eadbe61d82ae89e1c.ctex::
 LIMBOBACKGROIUNDKBSD.PNG.PNG::CompressedTexture2D::1002086470932815116::1766948864::1766948864::1::::<><><>0<>0<>3dcbb0276753c965b4ff7193a7741b96<>res://.godot/imported/LIMBOBACKGROIUNDKBSD.PNG.PNG-b80810b4fc074ddf06b465fc162d8aa7.ctex::
-menu.gd::GDScript::5890733910985532437::1766948864::0::1::::<>CanvasLayer<><>0<>0<><>::
+menu.gd::GDScript::5890733910985532437::1770652604::0::1::::<>CanvasLayer<><>0<>0<><>::
 new_gradient_texture_2d.tres::GradientTexture2D::2701283874465314199::1756806770::0::1::::<><><>0<>0<><>::
-player.gd::GDScript::3921497852153743214::1766948864::0::1::::<>CharacterBody2D<><>0<>0<><>::
-player.tscn::PackedScene::8301244819711195867::1766949368::0::1::::<><><>0<>0<><>::uid://bv4uq5f1w44yc::::res://player/player.gd<>uid://c1jje4ygdcrd8::::res://player/ghost.tscn<>uid://cw7wvyksa1cmw::::res://player/ingame.gdshader<>uid://duxhjectu76ib::::res://player/crosshair.png<>uid://cqf7w3t4dklof::::res://player/camera_2d.gd<>uid://d3pr7x1yib4ud::::res://staff and spells/staff.tscn<>uid://fbr8mttax4x4::::res://player/dash.tscn<>uid://177yu7us6c7c::::res://player/run.png<>uid://bgnuolc0lq1pi::::res://player/health_bar.tscn<>uid://0sknwbu61l41::::res://enemy/coin.png<>uid://bv183sh288w7t::::res://player/spell_display.tscn<>uid://hivvbyufkiwx::::res://general/slkscr.ttf<>uid://cfs22gdv0f0x1::::res://player/shadow.png<>uid://b5wkm2ql0ikt2::::res://general/alagard_by_pix3m-d6awiwp.ttf<>uid://ojohn0hmalaa::::res://player/LIMBOBACKGROIUNDKBSD.PNG.PNG<>uid://861tj8gdo8rb::::res://player/test.gdshader<>uid://doeuay76gs2qr::::res://player/limbo backgroundkadjfnblkad.PNG.PNG<>uid://bbjvx0gnnwnqf::::res://player/book.png<>uid://cp6rr6b8iv42d::::res://player/menu.gd<>uid://yovq23eebiav::::res://player/bookmarks/stat_mark.png<>uid://bjee1bvmf5bs7::::res://player/bookmarks/stat_mark_pressed.png<>uid://q2f7mqi2fgrn::::res://player/bookmarks/setting_mark.png<>uid://cs02t2jyq6xf7::::res://player/bookmarks/setting_mark_pressed.png<>uid://dlhlbiy76atmk::::res://player/bookmarks/options_mark.png<>uid://in2uvssplv5s::::res://player/bookmarks/options_mark_pressed.png
+player.gd::GDScript::3921497852153743214::1770652664::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::8301244819711195867::1771207003::0::1::::<><><>0<>0<><>::uid://bv4uq5f1w44yc::::res://player/player.gd<>uid://c1jje4ygdcrd8::::res://player/ghost.tscn<>uid://cw7wvyksa1cmw::::res://player/ingame.gdshader<>uid://duxhjectu76ib::::res://player/crosshair.png<>uid://cqf7w3t4dklof::::res://player/camera_2d.gd<>uid://d3pr7x1yib4ud::::res://staff and spells/staff.tscn<>uid://fbr8mttax4x4::::res://player/dash.tscn<>uid://177yu7us6c7c::::res://player/run.png<>uid://bgnuolc0lq1pi::::res://player/health_bar.tscn<>uid://0sknwbu61l41::::res://enemy/coin.png<>uid://bv183sh288w7t::::res://player/spell_display.tscn<>uid://hivvbyufkiwx::::res://general/slkscr.ttf<>uid://cfs22gdv0f0x1::::res://player/shadow.png<>uid://b5wkm2ql0ikt2::::res://general/alagard_by_pix3m-d6awiwp.ttf<>uid://ojohn0hmalaa::::res://player/LIMBOBACKGROIUNDKBSD.PNG.PNG<>uid://861tj8gdo8rb::::res://player/test.gdshader<>uid://doeuay76gs2qr::::res://player/limbo backgroundkadjfnblkad.PNG.PNG<>uid://bbjvx0gnnwnqf::::res://player/book.png<>uid://cp6rr6b8iv42d::::res://player/menu.gd<>uid://yovq23eebiav::::res://player/bookmarks/stat_mark.png<>uid://bjee1bvmf5bs7::::res://player/bookmarks/stat_mark_pressed.png<>uid://q2f7mqi2fgrn::::res://player/bookmarks/setting_mark.png<>uid://cs02t2jyq6xf7::::res://player/bookmarks/setting_mark_pressed.png<>uid://dypj7rk8crlj1::::res://staff and spells/fireball.png<>uid://dlhlbiy76atmk::::res://player/bookmarks/options_mark.png<>uid://bik04bc6fafuo::::res://player/spells_menu.gd<>uid://in2uvssplv5s::::res://player/bookmarks/options_mark_pressed.png<>uid://4nm6hmjffnrf::::res://player/upgradebar.png<>uid://cpvfn8c00bxbh::::res://staff and spells/circle.png
 run.png::CompressedTexture2D::1892956926375727714::1757322176::1766948537::1::::<><><>0<>0<>3e15e2f27cd0a5783788ec4cfe344809<>res://.godot/imported/run.png-33c2fa07cd4c5ca2732604934eb5c03c.ctex::
 shadow.png::CompressedTexture2D::5162632281151859364::1757778950::1766948537::1::::<><><>0<>0<>f2b33551f2c008bf94fccf17b39294b5<>res://.godot/imported/shadow.png-493c4635eca1ce8bdece629560617dc7.ctex::
+spells_menu.gd::GDScript::2970144980208506746::1770821583::0::1::::<>CanvasLayer<><>0<>0<><>::
 spell_display.gd::GDScript::1828555227420783264::1758720292::0::1::::<>Node2D<><>0<>0<><>::
 spell_display.tscn::PackedScene::3916114842194078307::1764349342::0::1::::<><><>0<>0<><>::uid://1b1bjjs5stkq::::res://player/spell_display.gd<>uid://cpvfn8c00bxbh::::res://staff and spells/circle.png<>uid://dypj7rk8crlj1::::res://staff and spells/fireball.png<>uid://ckmc8jf2w38lc::::res://staff and spells/magic_missile.png<>uid://ct8sr0yb48cok::::res://staff and spells/ice_spikes.png
 test.gdshader::Shader::2381840646292950375::1766948864::0::1::::<><><>0<>0<><>::
@@ -64,8 +65,8 @@ setting_mark.png::CompressedTexture2D::1179121083333761983::1766948864::17669488
 setting_mark_pressed.png::CompressedTexture2D::6089524718757937374::1766948864::1766948864::1::::<><><>0<>0<>673c07b6b6cbb8b0984499c783817c1f<>res://.godot/imported/setting_mark_pressed.png-9dbadd297c6072570a3093a5ccefd6ae.ctex::
 stat_mark.png::CompressedTexture2D::1714738626992301309::1766948864::1766948864::1::::<><><>0<>0<>16b4df1cbceb3106f1c4d211d4325823<>res://.godot/imported/stat_mark.png-10216cccb685648c7a3e77098a6641ac.ctex::
 stat_mark_pressed.png::CompressedTexture2D::3026667171581555336::1766948864::1766948864::1::::<><><>0<>0<>16761a0c0f2eb6024b144cf66080fb72<>res://.godot/imported/stat_mark_pressed.png-0f347cc4657d76af09ab862a756c180f.ctex::
-::res://staff and spells/::1766948864
-basic_staff.gd::GDScript::6778184599431009911::1766948864::0::1::::<>Node2D<><>0<>0<><>::
+::res://staff and spells/::1770988693
+basic_staff.gd::GDScript::6778184599431009911::1770988693::0::1::::<>Node2D<><>0<>0<><>::
 basic_staff.png::CompressedTexture2D::1736699099737152222::1751662762::1766948537::1::::<><><>0<>0<>d2b9c6524daf9306d2c6fcf920e8dac2<>res://.godot/imported/basic_staff.png-ccd3e6691efe90016f0db8cd99152ec7.ctex::
 circle.png::CompressedTexture2D::5869354492606062653::1758116886::1766948537::1::::<><><>0<>0<>cfc2a39c69158f2293135511e086db9b<>res://.godot/imported/circle.png-583d2737dcf1170ed00ca77e9597cb0d.ctex::
 explosion.gd::GDScript::8292246215726298412::1757701464::0::1::::<>Node2D<><>0<>0<><>::

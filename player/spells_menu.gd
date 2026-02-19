@@ -1,15 +1,4 @@
-extends Node2D
-
-var player_position = 0
-var player_health = 6
-var mana = 0
-var full_mana = 0
-var coins = 0
-var current_spell = 0
-var points = 0
-var attack_speed = 0
-var spells = [magic_missile]
-
+extends CanvasLayer
 class magic_missile:
 	const title: String = "magic_missile"
 	const file: = preload("res://staff and spells/magic_missile.tscn")
@@ -33,3 +22,20 @@ class ice_storm:
 	const file: = preload("res://staff and spells/ice_storm.tscn")
 	const delay: float = 0.3
 	const shake: float = 3
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+
+
+
+
+func _on_fireball_button_pressed() -> void:
+	Global.spells.append(fireball)

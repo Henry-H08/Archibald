@@ -5,7 +5,7 @@ extends Node2D
 @onready var particles: GPUParticles2D = $GPUParticles2D
 
 var can_use = true
-var spells = [magic_missile, fireball, triple_ice, ice_storm]
+var spells = [magic_missile]
 var current_spell = magic_missile
 var current = 0
 var spell = []
@@ -38,6 +38,7 @@ class ice_storm:
 
 
 func _process(delta: float) -> void:
+	spells = Global.spells
 	attack_speed = Global.attack_speed
 	look_at(get_global_mouse_position())
 	current_spell = spells[current]
@@ -48,6 +49,7 @@ func _process(delta: float) -> void:
 		scale.y = -1
 	else:
 		scale.y = 1
+	
  
 	if Input.is_action_pressed("shoot"):
 		if can_use == true:
@@ -65,12 +67,14 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("spell_left"):
 		if current == 0:
-			current = 3
+			current = spells.size()-1
+			
 		else:
 			current -= 1
 	if Input.is_action_just_pressed("spell_right"):
-		if current == 3:
+		if current == spells.size()-1:
 			current = 0
+			
 		else:
 			current += 1
 	

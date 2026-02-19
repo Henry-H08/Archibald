@@ -28,7 +28,7 @@ extends CharacterBody2D
 var input := Vector2.ZERO
 var idle_time = 0
 var health = 6
-var mana = 7
+
 var damage_delay = 0
 var dash_speed = 150
 var dash_duration = 0.2
@@ -40,14 +40,12 @@ var rotate_range = 4
 var rotate_speed = 0.5
 var stat_menu_open = false
 signal dead
-var menu_open = false
+
 
 static var has_started := false
 
 func _ready():
 	health_bar.init_health(health)
-	Global.mana = mana
-	Global.full_mana = mana
 	rotate_start = rotation
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	Global.player_health = health
@@ -68,7 +66,6 @@ func _ready():
 
 func _physics_process(delta):
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
-	mana = Global.mana
 	input.x = Input.get_action_strength("right") - Input.get_action_strength("left")
 	input.y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	input = input.normalized()
@@ -145,7 +142,7 @@ func _physics_process(delta):
 	
 	
 	Global.player_health = health
-	Global.mana = mana
+
 	
 	
 

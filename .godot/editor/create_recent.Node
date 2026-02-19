@@ -1,5 +1,8 @@
+TextureButton
+Button
+ColorRect
+Sprite2D
+Label      - Matches the "text" keyword.
+CanvasLayer
 AudioStreamPlayer2D
 AudioStreamPlayer      - Matches the "song" keyword.
-TextureButton
-Sprite2D
-ColorRect
